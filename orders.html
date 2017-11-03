@@ -1,0 +1,16 @@
+
+{%  extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aaa.css' %}">
+{% endblock %}
+{% block title %}Заказы{%  endblock %}
+{% block body %}
+    <ul>
+        {% for order in orders %}
+            {% include 'order_element.html' with element=order %}
+        {% empty %}
+            <li>пустой список</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

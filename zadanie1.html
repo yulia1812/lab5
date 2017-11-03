@@ -1,0 +1,8 @@
+{% extends 'zadanie.html' %}
+
+{%  block title  %}{% endblock %}
+{%  block body %}
+    {% for z in orders %}
+        {% include 'zadanie2.html' with element=z %}
+    {% endfor %}
+{%  endblock %}
